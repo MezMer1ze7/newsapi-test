@@ -1,9 +1,13 @@
 import NewsList from "../components/NewsList"
+import Head from 'next/head'
 
 const Search_results = ({ sData }) => {
   
     return (
-        <div>
+      <div>
+        <Head>
+          <title>Search Results</title>
+        </Head>
             {sData.totalResults != 0 ?
                 <NewsList articles={sData} /> :
                 <h1 className="text-center p-32 text-4xl font-bold uppercase md:text-6xl">News <span className="text-red-500">not</span> found</h1>

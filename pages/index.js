@@ -2,6 +2,7 @@ import NewsList from '../components/NewsList'
 import { requests } from '../utils/requests'
 import {articleData} from '../articleData'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 
 
@@ -39,6 +40,9 @@ const Home = ({ data,category }) => {
 
   return (
     <div >
+        <Head>
+        <title>NEWS</title>
+      </Head>
 
       <div className="flex bg-gray-300 justify-around p-12 mt-10">
         {Object.entries(countries).map(([key, { country, name }]) => (

@@ -1,6 +1,7 @@
 import moment from 'moment'
 import { useState } from 'react'
 
+
 import Button from './Button'
 
 const NewsList = ({ articles }) => {
@@ -9,6 +10,7 @@ const NewsList = ({ articles }) => {
     
     return (
         <>
+
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-2 sm:px-40 py-24">
             {articles?.articles?.slice(0, loadMore).map((article, idx) => (
                 <a  key={idx} href={article.url} target="_blank" rel="noreferrer" className="hover:shadow-md border-b-2 border-gray-300 group ">

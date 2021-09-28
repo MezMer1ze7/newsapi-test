@@ -25,7 +25,7 @@ const Navbar = () => {
             <SearchForm/>
             <div className="flex items-start justify-between pt-20 text-xl overflow-x-scroll scrollbar-hide whitespace-nowrap">
                 {Object.entries(requests).map(([key,{title, url}]) => (
-                    <button className="px-5 duration-200 hover:scale-125" key={key} onClick={() => router.push(`/?category=${key}`)}>{title}</button>
+                    <button className="px-5 duration-200 hover:scale-125" key={key} onClick={() => router.push(`/?category=${title}`)}>{title}</button>
                     
                 ))}
             </div>
